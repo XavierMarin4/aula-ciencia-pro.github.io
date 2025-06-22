@@ -171,8 +171,8 @@ body {
 /* foto de perfil redonda */
 .profile-photo {
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 50px;
+  height: 50px;
   object-fit: cover;
 }
 /* .about-content ya tiene display:flex */
@@ -189,7 +189,7 @@ body {
 
 /* Logo más pequeño junto al título */
 .hero-logo {
-  height: 60px;
+  height: 80px;
   width: auto;
 }
 
