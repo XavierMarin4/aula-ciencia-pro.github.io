@@ -221,41 +221,41 @@ body {
   cursor: pointer;
 }
 
-/* Hero: contenedor de imagen + texto */
+/* Hero base */
 .hero {
   background-color: var(--color-accent);
   color: var(--color-primary);
   padding: 3rem 1rem;
 }
 
-/* Flex interno para separar imagen y texto */
+/* Contenedor flex interno */
 .hero-inner {
   display: flex;
-  align-items: center;      /* centra verticalmente */
+  align-items: center;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   gap: 2rem;
-  flex-wrap: wrap;          /* para móviles apila */
+  flex-wrap: wrap;
 }
 
-/* Imagen siempre al 40% del ancho */
+/* logo.png como imagen del Hero */
 .hero-image {
   flex: 0 0 40%;
-  max-width: 600px;
   width: 100%;
+  max-width: 500px;  /* o pon el ancho que prefieras */
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
 
-/* Texto a la derecha */
+/* Bloque de texto alineado a la derecha */
 .hero-text {
   flex: 1 1 50%;
   text-align: left;
 }
 
-/* Título grande */
+/* Título */
 .hero-title {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -267,10 +267,11 @@ body {
   margin: 0.5rem 0;
 }
 
-/* Responsive: en pantallas estrechas apilar verticalmente */
+/* Responsive: apila en móvil */
 @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
+    text-align: center;
   }
   .hero-image {
     flex: 0 0 80%;
@@ -278,6 +279,5 @@ body {
   }
   .hero-text {
     flex: 1 1 100%;
-    text-align: center;
   }
 }
