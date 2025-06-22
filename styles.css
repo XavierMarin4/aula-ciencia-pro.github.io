@@ -221,29 +221,59 @@ body {
   cursor: pointer;
 }
 
-/* Hero */
+/* Hero: contenedor centralizado y con imagen a la izquierda */
 .hero {
-  padding: 3rem 1rem;
-  text-align: center;
   background-color: var(--color-accent);
   color: var(--color-primary);
-}
-.hero-header {
+  padding: 3rem 1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;     /* alinea imagen y texto por su línea media */
+  gap: 2rem;               /* espacio entre imagen y texto */
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;         /* en móvil apila imagen y texto */
+}
+
+/* Imagen del hero */
+.hero-image {
+  flex: 0 0 auto;
+  width: 300px; /* ajústalo a tu gusto */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Texto del hero centrado */
+.hero-text {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Título grande */
+.hero-title {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
-.hero-logo {
-  height: 80px;   /* ajusta aquí el tamaño deseado */
-  width: auto;
-}
-.hero-title {
-  font-size: 2.5rem;
-  margin: 0;
-}
+
+/* Subtítulos */
 .hero-subtitle {
   font-size: 1.125rem;
   margin: 0.5rem 0;
 }
+
+/* Ajuste responsive: en pantallas muy estrechas apilar vertical */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+  }
+  .hero-image {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
