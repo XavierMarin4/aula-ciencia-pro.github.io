@@ -243,7 +243,7 @@ body {
 .hero-image {
   flex: 0 0 40%;
   width: 100%;
-  max-width: 500px;  /* o pon el ancho que prefieras */
+  max-width: 400px;  /* o pon el ancho que prefieras */
   height: auto;
   border-radius: 8px;
   object-fit: cover;
