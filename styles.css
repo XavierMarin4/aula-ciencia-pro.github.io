@@ -1,0 +1,163 @@
+/* Estilos base */
+:root {
+    --color-primary: #002D62; /* azul oscuro */
+    --color-accent: #40E0D0; /* turquesa */
+    --color-light: #ffffff;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a {
+    color: var(--color-light);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-light);
+    cursor: pointer;
+}
+
+.hero {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.about,
+.courses,
+.advantages,
+.testimonials,
+.contact {
+    padding: 2rem 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.courses .card-container,
+.testimonials .testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card,
+.testimonial {
+    border: 1px solid var(--color-primary);
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: var(--color-light);
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.advantages ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.advantages li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.advantages li::before {
+    content: '\2713';
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 3px;
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        display: none;
+        background-color: var(--color-primary);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem 0;
+    }
+
+    .nav ul.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
