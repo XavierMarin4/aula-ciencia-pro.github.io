@@ -179,50 +179,71 @@ body {
 .about-content.reverse {
   flex-direction: row-reverse;
 }
-/* Contenedor del logo+titulo */
-.hero-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Logo más pequeño junto al título */
-.hero-logo {
-  height: 200px;      /* reduce el logo */
-  width: auto;
-  margin-right: 1rem; /* un poco de espacio al título */
-}
-
-
-/* Título grande */
-.hero-title {
-  font-size: 2.5rem;  /* antes quizás 2rem */
-  margin: 0;
-}
-
-/* Subtítulos */
-.hero-subtitle {
-  font-size: 1.125rem;  /* p. ej. 18px */
-  margin: 0.25rem 0;
-}
-
 /* Espacio entre párrafos en “Sobre Nosotros” */
 .about-text p {
   margin-bottom: 1rem;
 }
-
-/* Espacio entre párrafos en Hero */
-.hero-subtitle {
-  margin-bottom: 1rem;
-}
-
 /* Espacio entre testimonios */
 .testimonial {
   margin-bottom: 1.5rem;
 }
-
 /* Y dentro de cada testimonio, algo de aire */
 .testimonial p {
   margin-bottom: 0.75rem;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+/* Nav */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav a {
+  color: var(--color-light);
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--color-light);
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.hero-logo {
+  height: 80px;   /* ajusta aquí el tamaño deseado */
+  width: auto;
+}
+.hero-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+.hero-subtitle {
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
 }
