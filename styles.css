@@ -171,8 +171,8 @@ body {
 /* foto de perfil redonda */
 .profile-photo {
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
 }
 /* .about-content ya tiene display:flex */
@@ -189,9 +189,11 @@ body {
 
 /* Logo más pequeño junto al título */
 .hero-logo {
-  height: 80px;
+  height: 60px;      /* reduce el logo */
   width: auto;
+  margin-right: 1rem; /* un poco de espacio al título */
 }
+
 
 /* Título grande */
 .hero-title {
@@ -205,3 +207,22 @@ body {
   margin: 0.25rem 0;
 }
 
+/* Espacio entre párrafos en “Sobre Nosotros” */
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+/* Espacio entre párrafos en Hero */
+.hero-subtitle {
+  margin-bottom: 1rem;
+}
+
+/* Espacio entre testimonios */
+.testimonial {
+  margin-bottom: 1.5rem;
+}
+
+/* Y dentro de cada testimonio, algo de aire */
+.testimonial p {
+  margin-bottom: 0.75rem;
+}
