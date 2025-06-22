@@ -163,7 +163,7 @@ body {
 }
 /* para que el logo escale bien */
 .logo-img {
-  height: 50px;
+  height: 20px;
   width: auto;
 }
 
@@ -177,8 +177,8 @@ body {
 /* foto de perfil redonda */
 .profile-photo {
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 10px;
+  height: 10px;
   object-fit: cover;
 }
 
