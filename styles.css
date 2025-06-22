@@ -161,3 +161,24 @@ body {
         display: block;
     }
 }
+/* para que el logo escale bien */
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* layout en dos columnas */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* foto de perfil redonda */
+.profile-photo {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
