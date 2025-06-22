@@ -161,12 +161,6 @@ body {
         display: block;
     }
 }
-/* para que el logo escale bien */
-.logo-img {
-  height: 20px;
-  width: auto;
-}
-
 /* layout en dos columnas */
 .about-content {
   display: flex;
@@ -180,5 +174,34 @@ body {
   width: 10px;
   height: 10px;
   object-fit: cover;
+}
+/* .about-content ya tiene display:flex */
+.about-content.reverse {
+  flex-direction: row-reverse;
+}
+/* Contenedor del logo+titulo */
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Logo más pequeño junto al título */
+.hero-logo {
+  height: 60px;
+  width: auto;
+}
+
+/* Título grande */
+.hero-title {
+  font-size: 2.5rem;  /* antes quizás 2rem */
+  margin: 0;
+}
+
+/* Subtítulos */
+.hero-subtitle {
+  font-size: 1.125rem;  /* p. ej. 18px */
+  margin: 0.25rem 0;
 }
 
