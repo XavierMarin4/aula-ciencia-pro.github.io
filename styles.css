@@ -189,7 +189,7 @@ body {
 
 /* Logo más pequeño junto al título */
 .hero-logo {
-  height: 60px;      /* reduce el logo */
+  height: 150px;      /* reduce el logo */
   width: auto;
   margin-right: 1rem; /* un poco de espacio al título */
 }
