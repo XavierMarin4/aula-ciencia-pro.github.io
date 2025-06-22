@@ -221,37 +221,38 @@ body {
   cursor: pointer;
 }
 
-/* Hero: contenedor centralizado y con imagen a la izquierda */
+/* Hero: contenedor de imagen + texto */
 .hero {
   background-color: var(--color-accent);
   color: var(--color-primary);
   padding: 3rem 1rem;
-  display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
 }
 
+/* Flex interno para separar imagen y texto */
 .hero-inner {
   display: flex;
-  align-items: center;     /* alinea imagen y texto por su línea media */
-  gap: 2rem;               /* espacio entre imagen y texto */
+  align-items: center;      /* centra verticalmente */
+  justify-content: space-between;
   max-width: 1200px;
-  width: 100%;
-  flex-wrap: wrap;         /* en móvil apila imagen y texto */
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;          /* para móviles apila */
 }
 
-/* Imagen del hero */
+/* Imagen siempre al 40% del ancho */
 .hero-image {
-  flex: 0 0 auto;
-  width: 300px; /* ajústalo a tu gusto */
+  flex: 0 0 40%;
+  max-width: 600px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
-/* Texto del hero centrado */
+/* Texto a la derecha */
 .hero-text {
-  flex: 1 1 auto;
-  text-align: center;
+  flex: 1 1 50%;
+  text-align: left;
 }
 
 /* Título grande */
@@ -266,14 +267,17 @@ body {
   margin: 0.5rem 0;
 }
 
-/* Ajuste responsive: en pantallas muy estrechas apilar vertical */
+/* Responsive: en pantallas estrechas apilar verticalmente */
 @media (max-width: 768px) {
   .hero-inner {
     flex-direction: column;
   }
   .hero-image {
-    width: 80%;
-    max-width: 400px;
+    flex: 0 0 80%;
+    margin-bottom: 1.5rem;
+  }
+  .hero-text {
+    flex: 1 1 100%;
+    text-align: center;
   }
 }
-
